@@ -1,112 +1,31 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bapi Chatterjee &#8226; </title>
-
-  <link rel="apple-touch-icon" href="/images/IMG_0012.jpg"/>
-  <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="http://localhost:4000/favicon.ico" />
-
-  <link rel="stylesheet" href="/assets/normalize.css">
-  <link rel="stylesheet" href="/assets/main.css">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
-
-  <link rel="canonical" href="http://localhost:4000/">
-
-  <meta name="author" content="Bapi Chatterjee">
-  <meta name="description" content=""/>
-
-  <!-- Open Graph tags -->
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content=""/>
-  <meta property="og:url" content="http://localhost:4000/"/>
-  <meta property="og:image" content="http://localhost:4000/images/IMG_0012.jpg"/>
-  <meta property="og:description" content=""/>
-  <meta property="og:site_name" content="">
-
-  <!-- Twitter Card tags -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="">
-  
-  
-  <meta name="twitter:url" content="http://localhost:4000/">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:image:src" content="http://localhost:4000/images/IMG_0012.jpg">
-
-  
-</head>
-
-  <body>
-
-  <div class="wrapper">
+---
+layout: base
+---
+<div class="wrapper">
     <header>
-        
+        {% if site.compass.logo %}
         <div class="logo-container">
-          <a class="logo" href="" style="background-image: url('/images/IMG_0012.jpg')"></a>
+          <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}{{ site.compass.logo }}')"></a>
         </div>
-        
+        {% endif %}
 
-        
-        <div class="author-container"><h1>Bapi Chatterjee</h1></div>
-        
+        {% if site.compass.author %}
+        <div class="author-container"><h1>{{ site.compass.author }}</h1></div>
+        {% endif %}
 
-        
+        {% if site.compass.tagline %}
+        <div class="tagline-container"><p>{{ site.compass.tagline }}</p></div>
+        {% endif %}
 
-        
-        <div class="contact-container"><h3>Contact me</h3>
-<p>Office: I21.O2.120<br>Institute of Science and Technology Austria<br>Am Campus 1, 3400 Klosterneuburg, Austria<br>bapi.chatterjee@ist.ac.at<br>bhaskerchatterjee@gmail.com<br>Phone: +43 (0)2243 9000 2081<br>Fax: +43 (0)2243 9000 2000</p>
-<hr />
-<ul class="fa-ul main-list">
-  <li class="main-list-item">
-    <!-- <span class="fa fa-linkedin fa-lg main-list-item-icon"></span> -->
-    <a href="https://scholar.google.com/citations?user=ILI-_h4AAAAJ&hl=en">Publications</a>
-  </li>
-  <li class="main-list-item">
-    <!-- <span class="fa fa-linkedin fa-lg main-list-item-icon"></span> -->
-    <a href="https://www.linkedin.com/in/bapichatterjee/">LinkedIn</a>
-  </li>
-  <li class="main-list-item">
-    <!-- <span class="fa fa-github fa-lg main-list-item-icon"></span> -->
-    <a href="https://github.com/bapi">GitHub</a>
-  </li>
-  <li class="main-list-item">
-    <!-- <span class="fa fa-user fa-lg main-list-item-icon"></span> -->
-    <a href="https://in.mathworks.com/matlabcentral/profile/authors/1407762-bapi-chatterjee">Matlab Files</a>
-  </li>
-</ul>
-
-</div>
-        
+        {% if site.compass.contact %}
+        <div class="contact-container">{% include contact.html %}</div>
+        {% endif %}
     </header>
     <main>
-      
+      {% if site.compass.include_content %}
       <div class="content">
-        <h2>About me</h2>
-<p>At present, I am an ISTPlus Postdoc Fellow at the <a href="https://ist.ac.at/">Institute of Science and Technology Austria</a>, where I am honored to be hosted by <a href="http://people.csail.mit.edu/alistarh/">Dan Alistarh</a>.</p>
-<p>Before joining IST Austria, I spent two wonderful years as a Research Staff Member at IBM India Research Lab, New Delhi, India.</p>
-<p>Prior to that, I obtained a Ph.D. in Computer Science and Engineering from <a href="https://www.chalmers.se/en/Pages/default.aspx">Chalmers University of Technology</a>, Gothenburg, Sweden, supervised by <a href="http://www.cse.chalmers.se/~tsigas/">Philippas Tsigas</a>. I earned an M.Sc. (Mathematics), supervised by <a href="http://web.iitd.ac.in/~apmehra/">Aparna Mehra</a>, and an M.Tech. (Computer Applications), supervised by <a href="http://www.cse.iitd.ac.in/~subodh/">Subodh Kumar</a>, at the <a href="http://www.iitd.ac.in/">Indian Institute of Technology Delhi</a>, New Delhi, India.</p>
-
-<h2>Research Interests</h2>
-<p>I am interested in a number of research areas in Computer Science and Mathematics. Following are the topics on which either I am currently working or have worked with meaningful research output.</p>
-<ul>
-  <li>Machine Learning, Deep Learning.</li>
-  <li>Stochastic Optimization, Distributed Optimization.</li>
-  <li>Concurrent Data Structures, Distributed Computing.</li>
-  <li>Parallel Programming, GPGPU.</li>
-  <li>Blockchains.</li>
-  <li>Computational Topology.</li>
-  <li>Computational Game Theory.</li>  
-</ul>
-
-
-
+        {% include content.html %}
       </div>
-      
+      {% endif %}
     </main>
 </div>
-
-
-  </body>
-</html>
