@@ -6,6 +6,19 @@ body {
 header,
 main {
   padding: 0 20px; }
+/*** style buttons ***/
+.style-button {
+  background-color: rgb(152, 26, 202);
+  border: solid 1px blueviolet;
+  color: rgb(180, 240, 185);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
 /*** wrapper div for both header and main ***/
 .wrapper {
@@ -34,6 +47,7 @@ a:hover {
 since it must be aligned with the content */
 .fa-ul.main-list {
   margin-left: 0; }
+
 
 /* list icons */
 .main-list-item-icon {
